@@ -5,9 +5,18 @@ module.exports = {
     module: {
         rules: [
             {
+                enforce: 'pre',
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: ['babel-loader']
+                loader: 'eslint-loader',
+                options: {
+                    emitWarning: true,
+                }
+            },
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
             }
         ]
     },
