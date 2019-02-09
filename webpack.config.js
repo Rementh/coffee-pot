@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -39,6 +40,7 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
+        new CleanWebpackPlugin(['dist']),
         new CopyWebpackPlugin([
             { from: 'public' }
         ]),
