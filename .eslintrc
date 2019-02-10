@@ -6,18 +6,10 @@
         "jest": true
     },
     "parser": "babel-eslint",
-    "plugins": [
-        "react"
-    ],
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "standard-preact"
     ],
-    "settings": {
-        "react": {
-            "pragma": "h"
-        }
-    },
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
