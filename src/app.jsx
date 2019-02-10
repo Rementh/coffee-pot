@@ -1,4 +1,4 @@
-import React from 'react';
+import { h } from 'preact';
 
 const title = 'My Minimal React Webpack Babel Setup';
 
